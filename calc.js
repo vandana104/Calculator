@@ -1,61 +1,64 @@
-let memmory,duplicate,newMem=[],newArr=[],newJoin=[],helloo=[],result,hello=[];
+let memmory="",result,hello,store,newStr;
 function num(values1) {
-    console.log(values1);
-    memmory=values1;
-    document.getElementById("screen").value+=memmory; 
-    newArr.push(memmory);
-    console.log(newArr);
-    newJoin=newArr.join('');
-    memmory=""
+    newStr=values1;
+    memmory = newStr.toString();
+    document.getElementById("screen").innerHTML+=values1; 
 }
 function oper(operAnds){
-    if(memmory!="+"&& memmory!="-"&& memmory!="/"&& memmory!="*"){
-    helloo.push(newJoin);
-    console.log(helloo);
-    memmory=operAnds;
-    helloo.push(memmory);
-    console.log(helloo);
-    document.getElementById("screen").value+=memmory;
-    newJoin=[]
-    newArr=[]
+    if(memmory!=" + "&& memmory!=" - "&& memmory!=" / "&& memmory!=" * "){
+        if(memmory.length===0){ 
+            if(operAnds===" - "){
+                console.log(memmory.length)
+                memmory=operAnds;
+                document.getElementById("screen").innerHTML+=operAnds;
+            }
+            else if(operAnds===" + "|| operAnds===" / "|| operAnds===" * "){
+                document.getElementById("screen").innerHTML="";
+            }
+        }
+        else if( memmory.length!==0){
+                memmory=operAnds;
+                document.getElementById("screen").innerHTML+=operAnds;
+            }   
     }
 }
 function clr(){
     memmory=""
-    document.getElementById("screen").value=""
-    newArr=[];
-    newJoin=[];
-    helloo=[];
-    newMem=[];
+    document.getElementById("screen").innerHTML=""
+    result=""
 }
 function equal(){
-    helloo.push(newJoin);
-    newJoin=[];
-    var hello=helloo.filter(e => e.length);
+    store= document.getElementById("screen").innerHTML;
+    console.log(store);
+    hello=store.split(" ")
     console.log(hello);
     let len=hello.length;
     for(i=0;i<len;i++){
         if(hello[i]=="+"){
             result=parseFloat(hello[i-1])+parseFloat(hello[i+1]);
             hello[i+1]=result;
-            document.getElementById("screen").value=result;
+            document.getElementById("screen").innerHTML=result;
             console.log(result);
         }
         else if(hello[i]=="-"){
-            result=parseFloat(hello[i-1])-parseFloat(hello[i+1]);
+            result=hello[i-1]-hello[i+1];
             hello[i+1]=result;
-            document.getElementById("screen").value=result;    
+            document.getElementById("screen").innerHTML=result;    
         }
         else if(hello[i]=="/"){
-            result=parseFloat(hello[i-1])/parseFloat(hello[i+1]);
+            result=(hello[i-1])/(hello[i+1]);
             hello[i+1]=result;
-            document.getElementById("screen").value=result;   
+            document.getElementById("screen").innerHTML=result;   
         }
         else if(hello[i]=="*"){
-            result=parseFloat(hello[i-1])*parseFloat(hello[i+1]);
+            result=(hello[i-1])*(hello[i+1]);
             hello[i+1]=result;
-            document.getElementById("screen").value=result;  
+            document.getElementById("screen").innerHTML=result;  
         }    
-    }   hello=[];
-        hello.push(result);
+    }  
+    setTimeout(function equal(){
+        memmory=""
+        document.getElementById("screen").innerHTML=""
+        result=""
+        },10000);
     }

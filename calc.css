@@ -6,14 +6,21 @@
     margin-top: 27px; 
     border-radius: 30px;
 }
-#screen{
-    height: 76px;
+#screen {
+    height: 100px;
     width: 300px;
-    margin-left: 33px;
-    margin-top: 68px;
+    margin-left: 36px;
+    margin-top: 69px;
     background: #65c28a;
-    pointer-events: none;
-    border-width: 4px;
+    border: black;
+    border-color: black;
+    border-width: 12px;
+    position: relative;
+    top: 3.7rem;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-align:left;
+    font-weight: bold;
 }
 .land{
     height: 362px;
@@ -23,7 +30,7 @@
 .clr{
     height: 46px;
     width: 67px;
-    margin-top: 34px;
+    margin-top: 87px;
     margin-left: 33px;
     border-block:unset ;
     border-radius: 10px;
@@ -37,7 +44,7 @@
     transition-duration: 0.4s;
 }
 .clr :hover{
-    background-color: rgb(100, 11, 11);
+    background-color: rgb(88, 23, 23);
 }
 .btn{
     height: 40px;
@@ -54,7 +61,7 @@
     background:gainsboro;
     cursor: pointer;
 }
-.eql{
+.eql{ 
     height: 40px;
     width: 67px;
     border-radius: 10px;
@@ -78,8 +85,7 @@
     width: 325px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    
+    justify-content: space-evenly;  
 }
 .row3{
     height: 75px;
