@@ -1,76 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 .plot{
-    height: 570px;
-    width: 373px;
+    height: 34rem;
+    width: 22rem;
+    margin-left: 28rem;
+    margin-top: 0.8rem;
+    border-radius: 3rem;
     background: rgb(80, 78, 78);
-    margin-left: 470px;
-    margin-top: 27px; 
-    border-radius: 30px;
+    box-shadow: black  1.5px 0px 1px 1px;
 }
 #screen {
-    height: 100px;
-    width: 300px;
-    margin-left: 36px;
-    margin-top: 69px;
-    background: #65c28a;
-    border: black;
-    border-color: black;
-    border-width: 12px;
+    height: 5.5rem;
+    width: 18rem;
+    margin-left: 2rem;
+    top: 4.5rem;
+    padding-top: 1.8rem;
+    padding-left: 0.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: relative;
-    top: 3.7rem;
-    align-items: center;
-    font-family: 'Courier New', Courier, monospace;
-    text-align:left;
-    font-weight: bold;
+    font-size: 22px;
+    color: rgb(27, 24, 24);
+    background: #7ec99c;
+    border-right: solid gray;
+    border-right-width: 0.5rem;
+    border-bottom: solid rgb(126, 121, 121);
+    border-bottom-width: 0.3rem;
+    border-top: solid rgb(68, 65, 65);
+    border-top-width: 0.5rem;
+    border-left: solid rgb(41, 37, 37);
+    border-left-width:0.2rem;
 }
-.land{
-    height: 362px;
-    width: 302px;
-    margin-left: 35px;
+.row1{
+    height:4rem ;
+    background: rgb(80, 78, 78);
 }
 .clr{
-    height: 46px;
-    width: 67px;
-    margin-top: 87px;
-    margin-left: 33px;
-    border-block:unset ;
-    border-radius: 10px;
-    border-color:white;
-    border-left-color: white;
-    border-right-color: white;
-    border-bottom: white;
+    height: 3rem;
+    width: 4rem;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 6rem;
+    margin-left: 2rem;
     background: brown;
     color: white;
-    cursor: pointer;
-    transition-duration: 0.4s;
-}
-.clr :hover{
-    background-color: rgb(88, 23, 23);
-}
-.btn{
-    height: 40px;
-    width: 67px;
-    border-radius: 10px;
-    cursor: pointer;
-    background:rgb(185, 183, 183)
-}
-.operators{
-    height: 40px;
-    width: 67px;
-    border-radius: 10px;
-    font-size:larger;
-    background:gainsboro;
-    cursor: pointer;
-}
-.eql{ 
-    height: 40px;
-    width: 67px;
-    border-radius: 10px;
-    border-color:white;
-    border-left-color: white;
-    border-right-color: white;
-    border-bottom: white;
-    background: brown;
-    color: white;
+    box-shadow: black  1.5px 0px 1.5px 0px;
     cursor: pointer;
 }
 .land{
@@ -78,34 +54,51 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    align-content:center
+    align-content:center;
+    height: 295px;
+    width: 300px;
+    margin-top: 4.5rem;
+    margin-left: 25px;
+    background: rgb(80, 78, 78);
 }
-.row2{
-    height: 75px;
-    width: 325px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;  
-}
-.row3{
-    height: 75px;
-    width: 325px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.row4{
-    height: 75px;
-    width: 325px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.row5{
-    height: 75px;
-    width: 325px;
+.row2, .row3, .row4, .row5{
+    width: 19rem;
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
-    
+    background: rgb(80, 78, 78);
+
 }
+.btn, .operators,.eql{
+    height: 3rem;
+    width: 4rem;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: black  1.5px 0px 1.5px 0px;
+}
+.btn{
+    background:rgb(185, 183, 183)
+}
+.operators{
+    font-size:larger;
+    background:gainsboro;
+}
+.eql{ 
+    background: brown;
+    color: white;
+    cursor: pointer;
+}
+.clr:hover,.eql:hover{
+    background-color: rgb(226, 154, 154);
+    color: black;
+}
+.btn:hover{
+    background-color:slategrey;
+}
+.operators:hover{
+    background-color: rgb(255, 255, 255);
+}
+

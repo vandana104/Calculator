@@ -60,5 +60,5 @@ function equal(){
         memmory=""
         document.getElementById("screen").innerHTML=""
         result=""
-        },10000);
+        },50000);
     }
