@@ -3,11 +3,15 @@
     margin: 0;
     box-sizing: border-box;
 }
+.maindiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .plot{
     height: 34rem;
     width: 22rem;
-    margin-left: 28rem;
-    margin-top: 0.8rem;
+    margin-top: 3rem;
     border-radius: 3rem;
     background: rgb(80, 78, 78);
     box-shadow: black  1.5px 0px 1px 1px;
